@@ -560,7 +560,8 @@
 						focused._refreshCaption( sender );
 					}
 
-					// Testing if widget has wrapper. If doesn't then it was removed from DOM no need to refresh.
+					// Testing if widget has a wrapper - `previous.wrapper`. If it doesn't
+					// then it means it was removed from the DOM and there is no need to refresh it (#1543).
 					if ( previous && previous.wrapper && hasWidgetFeature( previous, 'caption' ) ) {
 						previous._refreshCaption( sender );
 					}
